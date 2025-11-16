@@ -1,0 +1,21 @@
+name: 'Image Sync'
+description: 'Sync multi-arch images to domestic registry'
+inputs:
+  registry:
+    description: '目标 registry,例如 swr.cn-north-4.myhuaweicloud.com'
+    required: true
+  namespace:
+    description: '目标命名空间'
+    required: true
+  username:
+    description: '目标仓库用户名'
+    required: true
+  password:
+    description: '目标仓库密码/令牌'
+    required: true
+  images:
+    description: '多行镜像,每行一条,可带 tag'
+    required: true
+runs:
+  using: 'node22'
+  main: 'dist/index.js'

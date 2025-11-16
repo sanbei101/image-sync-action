@@ -1,0 +1,28 @@
+{
+	"name": "image-sync-action",
+	"version": "1.0.0",
+	"private": false,
+	"description": "image syncer github action",
+	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"test": "vitest"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@actions/core": "^1.11.1",
+		"@actions/exec": "^1.1.1"
+	},
+	"devDependencies": {
+		"tsdown": "^0.16.4",
+		"vitest": "^4.0.9"
+	},
+	"main": "./dist/main.mjs",
+	"module": "./dist/main.mjs",
+	"exports": {
+		".": "./dist/main.mjs",
+		"./package.json": "./package.json"
+	}
+}
