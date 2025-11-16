@@ -19,3 +19,6 @@ inputs:
 runs:
   using: "node22"
   main: "dist/index.js"
+branding:
+  icon: "refresh-cw"
+  color: "blue"
