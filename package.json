@@ -13,7 +13,7 @@
 		"@actions/exec": "^2.0.0"
 	},
 	"devDependencies": {
-		"rolldown": "1.0.0-beta.58",
+		"rolldown": "1.0.0-beta.59",
 		"vitest": "^4.0.16"
 	}
 }
