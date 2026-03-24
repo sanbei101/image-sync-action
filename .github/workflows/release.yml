@@ -6,8 +6,6 @@ on:
       - 'v*.*.*'
 permissions:
   contents: write
-  workflows: write
-
 jobs:
   bundle:
     runs-on: ubuntu-latest
