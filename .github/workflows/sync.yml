@@ -19,7 +19,4 @@ jobs:
           namespace: sanbei
           username: ${{ secrets.HUAWEI_SWR_USERNAME }}
           password: ${{ secrets.HUAWEI_SWR_TOKEN }}
-          images: |
-            dhi.io/redis:8
-            dhi.io/postgres:18
-            dhi.io/caddy:2
+          images_file: image.txt
