@@ -15,7 +15,10 @@ inputs:
     required: true
   images:
     description: "多行镜像,每行一条,可带 tag"
-    required: true
+    required: false
+  images_file:
+    description: "镜像列表文件路径(txt),每行一条,支持 # 注释"
+    required: false
   source_registry:
     description: "源 registry,当拉取私有镜像时需要配置"
     required: false
