@@ -9,6 +9,8 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v6
       - name: sync images
         uses: sanbei101/image-sync-action@v2
         with:
