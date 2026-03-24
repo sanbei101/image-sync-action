@@ -1,8 +1,8 @@
 import { type SyncOpts, Src2Dst } from "../src/sync";
 import { describe, expect, it } from "vitest";
 const testOpts: SyncOpts = {
-  registry: "test.com",
-  namespace: "test",
+  registry: "swr.cn-north-4.myhuaweicloud.com",
+  namespace: "namespace",
   username: "",
   password: "",
   images: [],
@@ -28,6 +28,10 @@ const cases = [
     input: "ghcr.io/bitnami/redis:8",
     expect: `${testOpts.registry}/${testOpts.namespace}/bitnami/redis:8`,
   },
+  {
+    input: "dhi.io/postgres:18-debian13",
+    expect: `${testOpts.registry}/${testOpts.namespace}/dhi.io/postgres:18-debian13`,
+  }
 ];
 
 describe("Src2Dst", () => {

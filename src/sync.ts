@@ -6,6 +6,9 @@ export type SyncOpts = {
   namespace: string;
   username: string;
   password: string;
+  source_registry?: string;
+  source_username?: string;
+  source_password?: string;
   images: string[];
 };
 export function Src2Dst(image: string, opts: SyncOpts) {
@@ -30,9 +33,29 @@ async function docker(cmd: string[]): Promise<void> {
 }
 
 export async function sync(opts: SyncOpts): Promise<void> {
-  const { registry, username, password, images } = opts;
+  const {
+    registry,
+    username,
+    password,
+    source_registry,
+    source_username,
+    source_password,
+    images,
+  } = opts;
 
-  core.info(`🔐 login ${registry}`);
+  if (source_registry && source_username && source_password) {
+    core.info(`🔐 login source ${source_registry}`);
+    await exec.exec("docker", [
+      "login",
+      "-u",
+      source_username,
+      "-p",
+      source_password,
+      source_registry,
+    ]);
+  }
+
+  core.info(`🔐 login target ${registry}`);
   await exec.exec("docker", [
     "login",
     "-u",

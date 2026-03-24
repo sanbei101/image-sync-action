@@ -16,6 +16,15 @@ inputs:
   images:
     description: "多行镜像,每行一条,可带 tag"
     required: true
+  source_registry:
+    description: "源 registry,当拉取私有镜像时需要配置"
+    required: false
+  source_username:
+    description: "源仓库用户名"
+    required: false
+  source_password:
+    description: "源仓库密码/令牌"
+    required: false
 runs:
   using: "node24"
   main: "dist/index.js"
