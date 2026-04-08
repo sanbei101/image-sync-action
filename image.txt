@@ -4,3 +4,4 @@ dhi.io/postgres:18
 dhi.io/postgres:18-alpine3.22
 dhi.io/postgres:18-debian13
 dhi.io/caddy:2
+mlikiowa/napcat-docker
