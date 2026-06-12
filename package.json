@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^25",
-		"rolldown": "1.1.0",
+		"rolldown": "1.1.1",
 		"vitest": "^4.1.8"
 	}
 }
