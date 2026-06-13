@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: sync images
-        uses: sanbei101/image-sync-action@v1.2.0
+        uses: sanbei101/image-sync-action@v2
         with:
           source_registry: dhi.io
           source_username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -51,7 +51,7 @@ Action 配置：
 
 ```yaml
 - name: sync images
-  uses: sanbei101/image-sync-action@v1.2.0
+  uses: sanbei101/image-sync-action@v2
   with:
     source_registry: dhi.io
     source_username: ${{ secrets.DOCKER_HUB_USERNAME }}
